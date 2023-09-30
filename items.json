@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Kursi",
+      "price": 50
+    },
+    {
+      "id": 2,
+      "name": "Meja",
+      "price": 100
+    },
+    {
+      "id": 3,
+      "name": "Lemari",
+      "price": 150
+    },
+    {
+      "id": 4,
+      "name": "sofa",
+      "price": 150
+    },
+    {
+      "id": 5,
+      "name": "lampu",
+      "price": 200
+    }
+  ]

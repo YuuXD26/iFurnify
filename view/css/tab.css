@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  --Background: #f8f5f2;
+  --Headline: #232323;
+  --Paragraf: #222525;
+  --button: #078080;
+  --tertiary: #f8f5f2;
+  --secondary: #f45d48;
+}
+
+body {
+  min-height: 100%;
+  background-color: var(--Background);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: var(--Background);
+  box-shadow: 0 8px 16px hsla(0, 0%, 0%, 0.1);
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  margin: 0 1.5rem;
+}
+
+nav .menu-icon {
+  color: var(--Headline);
+  font-size: 1.4rem;
+  margin: 0 14px;
+  cursor: pointer;
+}
+
+.logo .logo-name {
+  color: var(--Headline);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.5rem;
+}
+
+.menu .menu-notification {
+  color: var(--Headline);
+  font-size: 1.4rem;
+  margin: 0 14px;
+  cursor: pointer;
+}
+
+.menu img {
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+nav .sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 350px;
+  height: 100%;
+  background-color: var(--Background);
+  padding: 20px 0;
+  transition: left 0.6s ease-in-out;
+}
+
+nav.open .sidebar {
+  left: 0;
+}
+
+.sidebar .sidebar-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 1rem;
+}
+
+.sidebar-content .list {
+  list-style: none;
+}
+
+.list .nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 14px 12px;
+  margin: 0.5rem 0;
+  color: var(--Headline);
+  border-right: 2px solid var(--button);
+  transition: background-color 0.4s;
+}
+
+.list .logout-border{
+  border-right: 2px solid var(--secondary);
+  text-align: center;
+  transition: background-color .4s, border .4s;
+}
+
+.list .logout-border:hover{
+  background-color: var(--secondary);
+  color: var(--Background);
+  border: none;
+}
+
+.list .logout-border:hover i{
+  color: var(--Background);
+}
+
+.list .logout-border:hover .logout{
+  color: var(--Background);
+}
+
+.nav-link:hover{
+    background-color: var(--button);
+}
+
+.lists .nav-link:hover .link{
+  color: var(--Background);
+}
+
+.lists .nav-link:hover .icon{
+  color: var(--Background);
+}
+
+.lists .nav-link .icon {
+  margin-right: 14px;
+  font-size: 20px;
+  color: var(--Headline);
+  transition: color .4s;
+}
+
+.lists .nav-link .link {
+  font-size: 1rem;
+  color: var(--button);
+  font-weight: 600;
+  transition: color .4s;
+}
+
+.list .nav-link .icon {
+  margin-right: 14px;
+  font-size: 20px;
+  color: var(--Headline);
+}
+
+.list .nav-link .link {
+  font-size: 1rem;
+  color: var(--button);
+  font-weight: 600;
+}
+
+.list .logout-border .logout {
+  color: var(--secondary);
+}
+
+section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: -1;
+}
+
+.content-user {
+  width: 100%;
+  height: 100%;
+}
+
+.edit-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.edit-user img {
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.form {
+  max-width: 550px;
+  margin: auto;
+}
+
+.label-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-left label i {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+.label-left .user-info {
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--button);
+  color: var(--Background);
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  pointer-events: none;
+}
+
+.label-left .user-info.active{
+  pointer-events: auto;
+}
+
+.label-left .user-info::placeholder {
+  color: var(--Background);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.btn-edit {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn {
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  background-image: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
+  box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
+  outline: none;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.btn:active {
+  opacity: 0.5;
+}
+
+.btn-save {
+  transition: all 0.3s ease-in-out;
+  display: none;
+}
+
+.btn-save {
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  background-image: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
+  box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
+  outline: none;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+  color: white;
+}
+
+.btn-save:hover {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.btn-save:active {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 568px) {
+  nav .menu-icon {
+    font-size: 1.2rem;
+  }
+  
+  .logo .logo-name {
+    font-size: 1.2rem;
+  }
+
+  .edit-user img {
+    width: 70px;
+  }
+
+  .form{
+    max-width: 350px;
+  }
+}

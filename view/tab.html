@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="css/tab.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <i class="bx bx-menu menu-icon"></i>
+            <span class="logo-name">Furniture</span>
+        </div>
+        <div class="sidebar">
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <span class="logo-name">Furniture</span>
+            </div>
+            <div class="sidebar-content">
+                <ul class="lists">
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class="bx bx-user icon"></i>
+                            <span class="link">User Info</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class='bx bx-heart icon'></i>
+                            <span class="link">Favorites</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class='bx bx-shopping-bag icon'></i>
+                            <span class="link">Transaction</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="link">Notifications</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="bottom-content">
+                    <li class="list">
+                        <a href="#" class="nav-link logout-border">
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="link logout">Logout</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <i class='bx bxs-bell menu-notification'></i>
+            <img src="Img/hu_tao.jpg" alt="profile">
+        </div>
+    </nav>
+    <section id="content">
+        <div class="content-user">
+            <div class="edit-user">
+                <img src="Img/hu_tao.jpg" alt="user-profile">
+                <h2>Hu Tao</h2>
+            </div>
+            <form action="" class="form">
+                <div class="label-left active">
+                    <label><i class="bx bx-user"></i> Name</label>
+                    <input type="text" class="user-info" name='name' placeholder="Hu Tao">                    
+                    <label><i class='bx bx-envelope'></i> Email</label>
+                    <input type="email" class="user-info" name='email' placeholder="hutao@gmail.com">
+                    <label><i class='bx bx-current-location' ></i> Location</label>
+                    <input type="text" class="user-info" name='location' placeholder="Silahkan masukkan negara...">
+                    <label><i class='bx bx-phone' ></i> Phone Number</label>
+                    <input type="tel" class="user-info" name='phoneNumber' placeholder="Silahkan masukkan telepon...">
+                </div>
+            </form>
+            <div class="btn-edit">
+                <button class="btn">Edit Profile</button>
+                <button class="btn-save">Save</button>
+            </div>
+        </div>
+    </section>
+    <script src="js/tab.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
